@@ -5,25 +5,28 @@ get '/' do
     erb :index
 end
 
+# Create route to show all movies
 get '/movies' do
     @movies = Movie.all
     erb :all_movies
 end
 
+
+# Create route to show form for a new movie
 get '/movies/new' do
     erb :new
 end
 
+# Create route to create a new movie when form is submitted
 post "/create" do
     @movie = Movie.create(params)
     redirect "/"
 end
 
-# Create route to show all movies
-
-# Create route to show form for a new movie
-
-# Create route to create a new movie when form is submitted
+get "/movies/:id" do
+    @movie = Movie.find(params[:id].to_i)
+    erb :show
+end
 
 # Create route to show one specific movie by ID
 
