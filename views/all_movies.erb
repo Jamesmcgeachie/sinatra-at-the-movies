@@ -1,12 +1,21 @@
 <h1>List of all Movie reviews</h1>
 
+<table border="1">
+<tr>
+    <td>Movie</td>
+    <td>Director</td>
+    <td>Rating (out of 10)</td>
 <% if @movies.count > 0 %>
     <% @movies.each do |movie| %>
-        <%= movie.title %> Directed by <%= movie.director %> <%= movie.rating %>
+            <tr>
+                <td><%= movie.title %></td>
+                <td><%= movie.director %></td>
+                <td><%= movie.rating %></td>
         <br/>
     <% end %>
 <% else %>
         <p>No movies reviewed.</p>
 <% end %>
+</table>
     
     
