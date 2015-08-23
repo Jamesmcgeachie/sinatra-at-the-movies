@@ -15,8 +15,6 @@ end
 
 post "/create" do
     Movie.new(params[:movie_title], params[:movie_director], params[:movie_rating])
-    redirect "/"
-end
 
 # Create route to show all movies
 
