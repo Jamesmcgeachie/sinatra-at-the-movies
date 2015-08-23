@@ -1,4 +1,12 @@
-<h1>List of all Movie reviews</hi>
+<h1>List of all Movie reviews</h1>
 
-<ul>
-<% @
+<% if @movies.count > 0 %>
+    <% @movies.each do |movie| %>
+        <%= movie.title %> Directed by <%= movie.director %> <%= movie.rating %>
+        <br/>
+    <% end %>
+<% else %>
+        <p>No movies reviewed.</p>
+<% end %>
+    
+    

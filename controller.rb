@@ -6,6 +6,7 @@ get '/' do
 end
 
 get '/movies' do
+    @movies = Movie.all
     erb :all_movies
 end
 
@@ -14,7 +15,7 @@ get '/movies/new' do
 end
 
 post "/create" do
-    Movie.new(params[:movie_title], params[:movie_director], params[:movie_rating])
+    @movie = Movie.create(params)
     redirect "/"
 end
 

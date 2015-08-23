@@ -1,7 +1,0 @@
-<form action="/create" method="post">
-    Movie name: <input type="text" name="movie_name"><br/>
-    Movie review: <input type="text" name="movie_review">
-    <input type="submit" />
-</form>
-
-<!-- wrote this based on the contacts repository Fabio posted -->
